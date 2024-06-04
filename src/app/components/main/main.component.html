@@ -1,1 +1,5 @@
-<p>main works!</p>
+<button (click)="loadDynamicComponent()" [disabled]="dynamicComponent">
+    Load Dynamic Component
+</button>
+
+<ng-container *ngComponentOutlet="dynamicComponent"></ng-container>

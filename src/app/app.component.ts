@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { MainComponent } from './components/main/main.component';
+import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import { MainComponent } from "./components/main/main.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, MainComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+	selector: "app-root",
+	standalone: true,
+	imports: [RouterOutlet, MainComponent],
+	templateUrl: "./app.component.html",
+	styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-  title = 'dynamic-hc';
+	title = "dynamic-hc";
 }
