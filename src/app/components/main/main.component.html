@@ -1,5 +1,6 @@
-<button (click)="loadDynamicComponent()" [disabled]="dynamicComponent">
-    Load Dynamic Component
+<button (click)="showComponent=!showComponent" >
+  Load Dynamic Component
 </button>
-
-<ng-container *ngComponentOutlet="dynamicComponent"></ng-container>
+@if (showComponent) {
+  <dynamic/>
+}

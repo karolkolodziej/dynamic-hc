@@ -1,16 +1,15 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 @Component({
 	selector: "dynamic",
 	standalone: true,
-	imports: [CommonModule],
+	imports: [],
 	templateUrl: "./dynamic.component.html",
 	styleUrl: "./dynamic.component.scss",
 })
 export class DynamicComponent {
 	async ngOnInit() {
-		const Highcharts = await import("highcharts");
+		const Highcharts = await import("highcharts").then(m => m.default);
 
 		Highcharts.chart("container", {
 			chart: {
