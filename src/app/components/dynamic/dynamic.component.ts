@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import type HighchartsESM from 'highcharts/es-modules/masters/highcharts.src';
 
 @Component({
 	selector: "dynamic",
@@ -9,7 +10,7 @@ import { Component } from "@angular/core";
 })
 export class DynamicComponent {
 	async ngOnInit() {
-		const Highcharts = await import("highcharts").then(m => m.default);
+		const Highcharts: typeof HighchartsESM = await import("highcharts/es-modules/masters/highcharts.src").then(m => m.default);
 
 		Highcharts.chart("container", {
 			chart: {
